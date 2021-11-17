@@ -68,3 +68,14 @@ return json.dumps(result_dict, ensure_ascii=False, indent="\t", cls=NpEncoder)
 # 결과 이미지를 base64로 인코딩 후 결과 값과 함께 json 형태로 return
 
 ```
+## 결과 화면 예시
+
+### 모공
+![image](https://user-images.githubusercontent.com/42457589/142145977-762dd5d3-59ef-4235-b798-904b579898de.png)
+  
+### 주름
+![image](https://user-images.githubusercontent.com/42457589/142145853-b3d502f0-d94e-4758-b506-1f3b732f538f.png)
+  
+### 잡티
+![image](https://user-images.githubusercontent.com/42457589/142146069-4154dc9d-39d1-4cd1-b01e-a9e4d72d64a2.png)
+
