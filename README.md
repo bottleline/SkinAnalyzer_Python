@@ -24,7 +24,7 @@ cv2.bitwise_not(_)                              # 6.이미지 반전
 cv2.morphologyEx(_, cv2.MORPH_TOPHAT, kernel)   # 7. 탑햇연산
 cv2.morphologyEx(_, cv2.MORPH_BLACKHAT, kernel) # 8. 블랙햇연산
 cv2.dilate(_,_,iterations=1)                    #
-cv2.erode(_,_,iterations=1)                     # 9. 열림연산
+cv2.erode(_,_,iterations=1)                     # 9. 닫기연산
 cv2.threshold(_, _, _, cv2.THRESH_BINARY)       # 10. 이진화
 self.check_eccen3(thresh2, 1, 200, 0.7)         # 11. 타원형체크 (결과값이 원형에 가까운지 검출)
 
