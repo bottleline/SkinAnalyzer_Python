@@ -52,5 +52,19 @@ skeletonize(result, method='lee')               # 8. 스켈레토나이즈 연�
 
 ```
 
+``` python
+# flask server
 
-        
+p = pore()     # 모공검출 객체생성
+pi = pigment() # 잡티검출 객체생성
+w = wrinkle()  # 주름검출 객체생성
+
+.
+.
+.
+.
+
+return json.dumps(result_dict, ensure_ascii=False, indent="\t", cls=NpEncoder) 
+# 결과 이미지를 base64로 인코딩 후 결과 값과 함께 json 형태로 return
+
+```
