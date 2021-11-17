@@ -12,7 +12,7 @@
 - `cv2`, `dlib`, `flask`
 
 ## 대략적인 구현 알고리즘
-
-  self.adjust_gamma(img,0.2)
-
+'''python
+self.adjust_gamma(img,0.2)
+'''
 
