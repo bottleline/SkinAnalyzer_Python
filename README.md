@@ -28,5 +28,29 @@ cv2.erode(_,_,iterations=1)                     # 9. 열림연산
 cv2.threshold(_, _, _, cv2.THRESH_BINARY)       # 10. 이진화
 self.check_eccen3(thresh2, 1, 200, 0.7)         # 11. 타원형체크 (결과값이 원형에 가까운지 검출)
 
+```  
+``` python
+# 잡티검출
+self.adjust_gamma(img, 0.2)                     # 1. 감마값조절
+cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)           # 2. 흑백화
+self.adaptive_his_streching(img)                # 3. 어댑티브 히스토그램 스트레칭 연산
+cv2.medianBlur(_, _)                            # 4. 메디안 필터 연산
+cv2.morphologyEx(_, cv2.MORPH_BLACKHAT, kernal) # 5. 블랙햇 연산
+cv2.threshold(_, _, _, cv2.THRESH_BINARY)       # 6. thresh hold 값에 따른 이진화
+self.check_eccen3(bt, 20, 1200, 0.4)            # 7. 타원형체크 (결과값이 원형에 가까운지 검출)
+```  
+``` python
+# 주름검출
+cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)           # 1. 흑백화
+self.adaptive_his_streching(img)                # 2. 어댑티브 히스토그램 스트레칭 연산
+cv2.morphologyEx(_, cv2.MORPH_TOPHAT, kernel)   # 3. 탑햇 연산
+cv2.medianBlur(tophat, _)                       # 4. 메디안 필터 연산
+self.detect_ridges(median, sigma=1.0)           # 5. 릿지검출 연산
+cv2.threshold(_, thresh, 255, cv2.THRESH_BINARY)# 6. thresh hold 값에 따른 이진화
+self.check_eccen3(ridge_thresh, 10, 500, eccen) # 7. 주름성 체크 (원형에 가까운 모양인지 선형에 가까운 모양인지 체크)
+skeletonize(result, method='lee')               # 8. 스켈레토나이즈 연산
+
 ```
 
+
+        
